@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Front from "./Front/Front";
 import Dashboard from "../src/admin/Dashboard"
 import Employee from "./admin/Employee";
@@ -38,12 +38,12 @@ import HallForm from "./customer/Hallform";
 import Starters from "./customer/Starters";
 import Statersform from "./customer/Statersform";
 import Offlineee from "./others/bakery/Offlineee";
-import Onlineee from "./others/bakery/Onlineee";
+// import Onlineee from "./others/bakery/Onlineee";
 // import LeaveForm from "./employee/Leaveform";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Front Page (Login) */}
         <Route path="/" element={<Front />} />
@@ -92,7 +92,7 @@ function App() {
         <Route path="/starters" element={<Starters />} />
         <Route path="/starters/hallform" element={<Statersform />} />
         <Route path="/bakery/offline" element={<Offlineee />} />
-        <Route path="/bakery/online" element={<Onlineee />} />
+        {/* <Route path="/bakery/online" element={<Onlineee />} /> */}
         <Route path="/partyhall/partyhall" element={<Partyhall />} />
         {/* <Route path="/staters/onlineeee" element={< />} /> */}
 
@@ -100,7 +100,7 @@ function App() {
 
         <Route path="/party-hall" element={<Partyhall />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
